@@ -1,0 +1,30 @@
+{
+  "name": "trainy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "parcel-namer-rewrite": {
+    "rules": {
+      "(.*)\\.(css)": "css/$1.$2",
+      "(.*)\\.(js)": "js/$1.$2",
+      "(.*)\\.(woff2?)": "fonts/$1.$2",
+      "(.*)\\.(svg|png|gif|jpg)": "img/$1.$2"
+    },
+    "silent": true
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-inline-string": "^2.4.0",
+    "handlebars": "^4.7.7",
+    "parcel": "^2.4.0",
+    "parcel-namer-rewrite": "^2.0.0-rc.2",
+    "parcel-reporter-clean-dist": "^1.0.4"
+  },
+  "dependencies": {}
+}
