@@ -26,5 +26,7 @@
     "parcel-namer-rewrite": "^2.0.0-rc.2",
     "parcel-reporter-clean-dist": "^1.0.4"
   },
-  "dependencies": {}
+  "dependencies": {
+    "debounce": "^1.2.1"
+  }
 }

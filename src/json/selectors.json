@@ -1,0 +1,5 @@
+{
+  "input": "[data-input=country]",
+  "list": "[data-result=list]",
+  "single": "[data-result=single]"
+}

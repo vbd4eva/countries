@@ -1,0 +1,13 @@
+<button type="button" data-action="save">Зберегти Країну</button>
+<div class="single">
+    <div class="single__country-name">
+        <b class="single__key">country name</b> : <span class="single__value">{{country}}</span></div>
+    <div class="single__capital"><b class="single__key">capital</b> : <span class="single__value">{{capital}}</span></div>
+    <div class="single__population"><b class="single__key">population</b> : <span class="single__value">{{population}}</span></div>
+    <ul class="single__languages">
+        {{#each languages}}
+            <li>{{this}}</li>
+        {{/each}}  
+    </ul>
+    <img src="{{flag}}" alt="flag of {{name}}" class="single__flag">
+</div>
