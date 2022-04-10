@@ -1,8 +1,11 @@
 import fetchCountries from '../tools/fetchCountries';
 import { callbacks } from '../data/app.js';
+import appState from './appState';
 
 export default function handleQuery(query) {
   const result = fetchCountries(query); //посилає запит
+
+  appState.currentCountry = null; //скидає поточну країну
 
   resultHandler(result); //оброблює результат запиту
 }

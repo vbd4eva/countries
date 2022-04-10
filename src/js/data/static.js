@@ -1,6 +1,6 @@
 const STORAGE_SAVED_LIST_KEY = 'savedContriesList';
-const STORAGE_CUSTOM_GRUPES_KEY = 'countriesCustomGroups';
-const STORAGE_APP_DATA_KEY = 'countriesAppData';
+// const STORAGE_CUSTOM_GRUPES_KEY = 'countriesCustomGroups';
+const STORAGE_SAVED_NAMES_LIST_KEY = 'saverCountriesNamesArray';
 
 const INPUT_QUERY = '[data-input=query]';
 const RESULT_LIST = '[data-result=list]';
@@ -15,7 +15,7 @@ export const selectors = {
 };
 
 export const storageKeys = {
-  STORAGE_APP_DATA_KEY,
-  STORAGE_CUSTOM_GRUPES_KEY,
   STORAGE_SAVED_LIST_KEY,
+  // STORAGE_CUSTOM_GRUPES_KEY,
+  STORAGE_SAVED_NAMES_LIST_KEY,
 };

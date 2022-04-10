@@ -21,7 +21,7 @@ function addListeners() {
     debounce(onInputQuery, QUERTY_HANDLE_DELAY),
   );
   resultList.addEventListener('click', handleClickOnResultList);
-  resultSingle.addEventListener('click', handleClickOnSingleResultCard);
+  resultSingle.addEventListener('click', handleClickOnResulSingle);
 }
 
 //
@@ -41,17 +41,10 @@ function handleClickOnResultList(e) {
   refs.inputQuery.value = country;
   sendQuery(country);
 }
-function handleClickOnSingleResultCard(e) {
-  //////////////////////////////////////////
-  //
-  // ЗБЕРЕЖЕННЯ
-  // додати мітку часу до результату
-  // додати до списку "savedContriesList"
-  // додати до списку "saverCountriesNamesArray"
-  //
-  //
-
-  console.log('handleClickOnSingleResultCard');
+function handleClickOnResulSingle(e) {
+  const action = e.target.dataset.action;
+  console.log(' Result Action = ', action);
+  callbacks.initSavedCountriesAction(action);
 }
 
 //

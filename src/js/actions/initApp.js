@@ -2,6 +2,7 @@ import * as storage from '../tools/localStorage';
 import * as appData from '../data/app';
 import initCallbacks from './initCallbacks';
 import { initPageController } from '../controllers/pageController';
+import appState from '../controllers/appState';
 
 export default function initApp() {
   initStorage();
@@ -13,5 +14,7 @@ export default function initApp() {
 
 function initStorage() {
   const storageData = storage.getAll();
-  console.log('initStorage', storageData);
+  Object.keys(storageData).forEach(key => {
+    appState[key] = storageData[key];
+  });
 }

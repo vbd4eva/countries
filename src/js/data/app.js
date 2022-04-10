@@ -1,8 +1,8 @@
-export const storageData = {
-  savedContriesList: null,
-  countriesCustomGroups: null,
-  saverCountriesNamesArray: null,
-};
+// export let storageData = {
+//   savedContriesList: [],
+//   countriesCustomGroups: [],
+//   saverCountriesNamesArray: [],
+// };
 
 export const refs = {
   inputQuery: null,
@@ -14,5 +14,5 @@ export const callbacks = {
   updateCurrentUserQuery: null,
   handleQuery: null,
   renderResult: null,
-  // handleClickOnSingleResultCard,
+  initSavedCountriesAction: null,
 };

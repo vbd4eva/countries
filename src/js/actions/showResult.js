@@ -9,7 +9,12 @@ function renderResultList(result) {
 }
 
 function renderResultSingle(result) {
-  const { name, capital, population, languages, flags } = result[0];
+  result = result[0];
+
+  appState.currentCountry = result;
+
+  const { name, capital, population, languages, flags } = result;
+
   const resultSingleData = {
     country: name.official,
     capital: capital[0],
