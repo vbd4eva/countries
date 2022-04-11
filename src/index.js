@@ -1,4 +1,4 @@
-import initApp from './js/actions/initApp';
+import initApp from './actions/initApp';
 
 initApp();
 
