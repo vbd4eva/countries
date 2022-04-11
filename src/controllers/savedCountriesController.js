@@ -16,7 +16,6 @@ export function runAction(actionKey) {
 
 function saveCountry() {
   const timeStamp = Date.now();
-  console.log('appState', appState);
   const countryToSave = { ...appState.currentCountry, timeStamp };
   const name = countryToSave.name.official;
 
@@ -32,6 +31,5 @@ function saveCountry() {
 }
 
 function updateCountry() {}
-
 function deleteCountry() {}
 function showAll() {}

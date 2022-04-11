@@ -1,17 +1,17 @@
 const appState = {
-  _query: '',
   _currentCountry: null,
 
   _savedContries: [],
   _countriesNames: [],
   // countriesCustomGroups: [],
 
-  get query() {
-    return this._query;
-  },
-  set query(value) {
-    this._query = value;
-  },
+  // _query: '',
+  // get query() {
+  //   return this._query;
+  // },
+  // set query(value) {
+  //   this._query = value;
+  // },
   //
   get currentCountry() {
     return this._currentCountry;

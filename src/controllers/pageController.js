@@ -1,20 +1,13 @@
-import { selectors, QUERTY_HANDLE_DELAY } from '../data/static';
-import { refs, callbacks } from '../data/app';
+import { QUERTY_HANDLE_DELAY } from '../data/static';
+import { refs, callbacks } from '../data/defined';
 import { debounce } from 'debounce';
 
 export function initPageController(context) {
-  initRefs.call(context);
-  addListeners.call(context);
+  addListeners();
 }
-function initRefs() {
-  const { INPUT_QUERY, RESULT_LIST, RESULT_SINGLE } = selectors;
 
-  this.refs.inputQuery = document.querySelector(INPUT_QUERY);
-  this.refs.resultList = document.querySelector(RESULT_LIST);
-  this.refs.resultSingle = document.querySelector(RESULT_SINGLE);
-}
 function addListeners() {
-  const { inputQuery, resultList, resultSingle } = this.refs;
+  const { inputQuery, resultList, resultSingle } = refs;
 
   inputQuery.addEventListener(
     'input',
@@ -24,17 +17,12 @@ function addListeners() {
   resultSingle.addEventListener('click', handleClickOnResulSingle);
 }
 
-//
-
 // Обробники подій
 function onInputQuery(e) {
   const query = e.target.value.trim();
   query && sendQuery(query);
 }
-function sendQuery(query) {
-  clearResultMarkup.call(refs);
-  callbacks.handleQuery(query);
-}
+
 function handleClickOnResultList(e) {
   const country = e.target.dataset.country;
   if (!country) return;
@@ -48,9 +36,14 @@ function handleClickOnResulSingle(e) {
 }
 
 //
+function sendQuery(query) {
+  clearResultMarkup();
+  callbacks.searchByQuery(query);
+}
+
 // Функції маркапу Маркапу
 function clearResultMarkup() {
-  const { resultList, resultSingle } = this;
+  const { resultList, resultSingle } = refs;
   resultList.innerHTML = resultSingle.innerHTML = '';
 }
 

@@ -1,0 +1,13 @@
+<div class="panel">    
+    {{#if isSaved}}
+    <p class="panel__info">({{timeStamp}}) Збережена у списку<span> з моменту збереження минуло <b>"время"</b></span>.</p>
+    {{/if }}
+    <div class="panel__control"> 
+        {{#if isSaved}}
+        <button type="button" data-action="update">оновити дані</button>
+        <button type="button" data-action="delete">видалити зі списку</button>
+        {{else}}
+        <button type="button" data-action="save">Зберегти Країну</button>
+        {{/if}}
+        <button type="button" data-action="show">Подивитись збережені</button></div>
+</div>
